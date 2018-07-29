@@ -78,7 +78,8 @@ def pop_genre(df,legend):
 	df = df.join(legend.select(func.col("genre_id"), func.col("genre")).distinct(), df.df_genre_id == legend.genre_id)
 	genreViewers = df.select("genre_id", "genre", "viewers").orderBy(func.desc("viewers"))
 	return genreViewers.show()
-	
+
+#Executing above functions
 print(show_dataframe(genreDataFrame))
 print(pop_best_sub_genre(dataFrameDays,genreDataFrame,"movie"))
 print(find_genre(genreDataFrame,"5"))
