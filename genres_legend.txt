@@ -1,4 +1,4 @@
-movi	3	science fiction	51
+movie	3	science fiction	51
 movie	3	musical	63
 movie	3	animation	17
 movie	3	dramatic	29
