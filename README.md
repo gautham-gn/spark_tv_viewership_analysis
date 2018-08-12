@@ -19,7 +19,7 @@ Fields are delimited with a comma.
       
 **In particular, this project yields the analysis of following insights:**    
   
-**1. Timeframe with maximum number of users watching telivision.**    
+**1. Timeframe with maximum number of users watching television.**    
 Useful for advertisers to show their ads to reach maximum audience.  
   
 **2. Best slot in a week to host a new show.**  
