@@ -28,7 +28,7 @@ Useful for tv channels to plan their show times for any new show.
 **3. Best channel for a particular time in a day.**  
 Advertisers can get to know the best channel for any particular time in a day to display their ads.  
   
-**5. Best genre .**   
+**4. Best genre .**   
 To know what genres viewers are interested in.  
 
 **5. Best sub genres for any partuclar genre.**  
