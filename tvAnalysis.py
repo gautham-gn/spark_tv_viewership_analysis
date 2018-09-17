@@ -59,7 +59,7 @@ def pop_channels(df,hour_time):
 #Best program in a particular channel
 def pop_best_program(df,channel):
 	df = df.filter(df["channel_id"] == channel).groupBy("channel_id","program_id").agg(func.count("user_id")).select(func.col("channel_id"), func.col("program_id"),func.col("count(user_id)").alias("viewers"))
-	ranked = df.withColumn("rank", func.rank().over(Window.partitionBy("channel_ids").orderBy(func.desc("viewers"))))
+	ranked = df.withColumn("rank", func.rank().over(Window.partitionBy("channel_id").orderBy(func.desc("viewers"))))
 	viewersProgram = ranked.select("channel_id", "program_id", "viewers").orderBy(func.desc("viewers"))
 	return viewersProgram.show()
 
@@ -82,8 +82,6 @@ def pop_genre(df,legend):
 #Executing above functions
 print(show_dataframe(genreDataFrame))
 print(pop_best_sub_genre(dataFrameDays,genreDataFrame,"movie"))
-print(find_genre(genreDataFrame,"5"))
-print(find_sub_genre(genreDataFrame,"104"))
 print(pop_day_best_hours(dataFrameDays))
 print(pop_best_hours(dataFrame))
 print(pop_channels(dataFrameDays,1))
